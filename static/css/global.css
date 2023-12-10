@@ -1,0 +1,71 @@
+:root {
+    --main-green-color: #85AA9F;
+    --secondary-green-color: #A5C0B8;
+}
+
+body {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+html {
+    font-family: FixelText, sans-serif;
+}
+
+button {
+    text-decoration: inherit;
+    text-align: center;
+    font-family: FixelText, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    border: inherit;
+    border-radius: 30px;
+    height: 100%;
+    padding: 2%;
+    background-color: var(--main-green-color);
+    color: #FCFCFC;
+    cursor: pointer;
+}
+
+
+
+button:hover {
+    background-color: var(--secondary-green-color);
+}
+
+a{
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+input {
+    border-radius: 10px;
+    border: 1px solid #1214171A;
+    padding: 3%;
+    font-size: 16px;
+}
+
+input, textarea, select {
+    font-family: FixelText, sans-serif;
+}
+
+input:focus {
+    outline: none !important;
+    border: 1px solid #85AA9F;
+}
+
+input::placeholder {
+    color: black;
+}
+
+.vocab_main {
+    padding: 2% 5% 5% 5%;
+}
+
+
+p{
+    margin: 0;
+}

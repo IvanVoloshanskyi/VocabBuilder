@@ -1,0 +1,138 @@
+.dictionary_block {
+    padding: 4%;
+}
+
+.dictionary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.dictionary_inputs {
+    width: 40%;
+}
+
+.dictionary_actions {
+    display: flex;
+    flex-direction: row;
+}
+
+.dictionary_actions__search {
+    margin-right: 8%;
+}
+
+.dictionary_actions__search input {
+    padding: 5%;
+    background-repeat: no-repeat;
+    background-position: 93%;
+    font-size: 16px;
+
+}
+
+.dictionary_words_table{
+    margin-top: 3%;
+}
+
+.dictionary_actions__categories {
+    padding: 2%;
+    border: 1px solid #1214171A;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 15px;
+}
+
+
+.dictionary_additional_buttons {
+    width: 37%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+
+.down {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.down img {
+    margin-left: 4%;
+}
+
+
+.custom-table {
+    font-size: 14px;
+    border-radius: 10px;
+    border-spacing: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.custom-table th {
+    background-color: #85AA9F1A;
+    color: black;
+    padding: 22px 22px;
+}
+
+.word-header, .translation-header{
+    background-image: url('../../img/united kingdom.svg');
+    background-repeat: no-repeat;
+    background-position: center right 5%;
+    background-size: 24px;
+}
+
+.translation-header{
+    background-image: url('../../img/ukraine.svg');
+}
+
+.custom-table th, .custom-table td{
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: #DBDBDB;
+    text-align: left;
+}
+
+.custom-table th:first-child, .custom-table td:first-child {
+    text-align: left;
+}
+
+.custom-table th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.custom-table th:last-child {
+    border-top-right-radius: 10px;
+    border-right: none;
+}
+
+.custom-table td {
+    padding: 22px 22px;
+}
+
+.custom-table tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+}
+
+.custom-table tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+}
+
+.custom-table tr td:last-child {
+    border-right: none;
+}
+
+
+.action-with-word {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.action-with-word:last-child{
+    text-align: center;
+}

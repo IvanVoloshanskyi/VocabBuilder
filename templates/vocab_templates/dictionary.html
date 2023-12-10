@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <section class="dictionary_block">
+        <div class="dictionary">
+            <div class="dictionary_inputs">
+                <section class="dictionary_actions">
+                    <div class="dictionary_actions__search">
+                        <input type="text" placeholder="Find the word"
+                               style="background-image: url('{% static "img/search.svg" %}')">
+                    </div>
+                    <div class="dictionary_actions__categories">
+                        <label for="categ"> Categories</label>
+                        <select name="categories" id="categ">
+                            <option value="number">1</option>
+                            <option value="number">2</option>
+                            <option value="number">3</option>
+                            <option value="number">4</option>
+                        </select>
+                    </div>
+                </section>
+
+
+            </div>
+            <div class="dictionary_additional_buttons">
+                <p class="down">To study: 20 </p>
+                <p class="down">Add Word <img src="{% static 'img/plus.svg' %}" alt=""></p>
+                <p class="down">Train oneself <img src="{% static 'img/switch-horizontal-01.svg' %}" alt=""></p>
+            </div>
+
+
+        </div>
+        <div class="dictionary_words_table">
+            <table class="custom-table">
+                <thead>
+                <tr>
+                    <th class="word-header"
+                        style="">Word
+                    </th>
+                    <th class="translation-header">
+                        Translation
+                    </th>
+                    <th>Category</th>
+                    <th>Progress</th>
+                    <th></th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Word</td>
+                    <td>Cлово</td>
+                    <td>Pronoun</td>
+                    <td>50%</td>
+                    <td class="action-with-word">
+                        {% include 'inc/_modal.html' %}
+                        <a href="#" class="ellipsis">...</a>
+
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>Word</td>
+                    <td>Cлово</td>
+                    <td>Pronoun</td>
+                    <td>50%</td>
+                    <td class="action-with-word">
+                        {% include 'inc/_modal.html' %}
+
+                        <a href="#" class="">...</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Word</td>
+                    <td>Cлово</td>
+                    <td>Pronoun</td>
+                    <td>50%</td>
+                    <td class="action-with-word"><a href="" class="">...</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+{% endblock %}

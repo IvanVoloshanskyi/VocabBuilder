@@ -1,0 +1,4 @@
+@import "global.css";
+@import "_inc/_header/_header.css";
+@import "register/register.css";
+@import "vocab/dictionary.css";

@@ -1,0 +1,20 @@
+{% load static %}
+
+{% block content %}
+    <div class="vocab_headers">
+        <section class="vocab_header__logo-text">
+            <img src="{% static "img/_inc/_header/Craftwork.png" %}" alt="">
+            <h3><a href="{% url 'home' %}">VocabBuilder</a></h3>
+        </section>
+        <section class="vocab_header__navigations">
+            <a href="{% url "dictionary" %}"><button class="vocab_header__navigations__button active">Dictionary</button></a>
+            <a href="/Training"><button class="vocab_header__navigations__button">Training</button></a>
+            <a href="/Recommend"><button class="vocab_header__navigations__button">Recommend</button></a>
+        </section>
+        <section class="vocab_header__profile">
+            <p>UserName</p>
+            <img src="{% static 'img/user.png' %}" alt="">
+        </section>
+    </div>
+
+{% endblock %}

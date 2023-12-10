@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <div class="vocab_register">
+        <section class="vocab_register__form">
+            <p class="p_register">Register</p>
+            <p class="p_register__secondary">To start using our services, please fill out the registration form below.
+                All fields are mandatory:</p>
+            <input type="text" placeholder="Name" class="vocab_register__form-input">
+            <input type="text" placeholder="Email" class="vocab_register__form-input">
+
+            <div class="password-input">
+                <input placeholder="Password" type="password" id="password" name="password"
+                       class="vocab_register__form-input">
+                <img class="toggle-password" src="{% static "img/eye.png" %}" alt="Show/Hide Password"
+                     onclick="togglePassword()">
+            </div>
+
+            <div class="vocab_register__buttons">
+                <a href="#"><button class="vocab_register__button register">Register</button></a>
+                <a href="{% url 'login' %}"><button class="vocab_register__button login">Login</button></a>
+            </div>
+
+        </section>
+
+        <section class="vocab_register_info">
+            <img src="{% static "img/illustration.png" %}" alt="">
+        </section>
+        <script>
+            function togglePassword() {
+                var passwordInput = document.getElementById("password");
+                var toggleIcon = document.querySelector(".toggle-password");
+
+                if (passwordInput.type === "password") {
+                    passwordInput.type = "text";
+                    toggleIcon.src = "{% static "img/eye-off.png" %}";
+                } else {
+                    passwordInput.type = "password";
+                    toggleIcon.src = "{% static "img/eye.png" %}";
+                }
+                toggleIcon.classList.toggle("active");
+
+            }
+        </script>
+    </div>
+{% endblock %}

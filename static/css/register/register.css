@@ -1,0 +1,74 @@
+.vocab_register{
+    display: flex;
+    flex-direction: row;
+}
+
+.vocab_register__form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(133, 170, 159, 0.1);
+    border-radius: 30px;
+    padding: 7%;
+    width: 45%;
+    margin-right: 5%;
+}
+.p_register{
+    font-size: 40px;
+    margin: 0 0 15px 0;
+    font-weight: bold;
+}
+.p_register__secondary{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: lighter;
+    margin-bottom: 32px;
+}
+.vocab_register__buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.vocab_register__button{
+    width: 100%;
+}
+.vocab_register__button.login{
+    background-color: initial;
+    color: rgba(18, 20, 23, 0.5);
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 2%;
+}
+
+.vocab_register__form-input{
+    background-color: rgba(133, 170, 159, 0.1);
+    margin-bottom: 14px;
+}
+.password-input {
+    position: relative;
+}
+
+
+input#password{
+    width: 94%;
+}
+
+.vocab_register_info img{
+    margin-top: 3%;
+}
+.toggle-password {
+    position: absolute;
+    top: 38%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease-in-out;
+
+}
+.vocab_header__profile img{
+
+}
+.toggle-password.active {
+    transform: translateY(-50%) rotate(180deg);
+}
