@@ -1,3 +1,4 @@
+from django.urls import reverse_lazy
 from variables_from_env import DB_PORT, DB_NAME, DB_HOST, DB_USER, DB_PASSWORD
 from pathlib import Path
 
@@ -13,8 +14,16 @@ SECRET_KEY = 'django-insecure-y+iu65e9fhv_@d259&804p4)@kc^mp7vf7+)ns$^0#17_9u9eh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+DEBUG_TOOLBAR_CONFIG = {
+    'SHOW_TOOLBAR_CALLBACK': lambda r: False,  # disables it
+    # '...
+}
 
+ALLOWED_HOSTS = ['*', ]
+ALLOWED_ORIGINS = ['https://*.ngrok-free.app']
+CSRF_TRUSTED_ORIGINS = ALLOWED_ORIGINS.copy()
+CSRF_ALLOWED_ORIGINS = ALLOWED_ORIGINS.copy()
+CORS_ORIGINS_WHITELIST = ALLOWED_ORIGINS.copy()
 # Application definition
 
 INSTALLED_APPS = [
@@ -28,6 +37,7 @@ INSTALLED_APPS = [
     # apps
     'vocab.apps.VocabConfig',
     'debug_toolbar',
+    'user_account.apps.AuthenticationConfig',
 ]
 
 MIDDLEWARE = [
@@ -71,14 +81,21 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.mysql",
+#         "NAME": DB_NAME,
+#         "USER": DB_USER,
+#         "PASSWORD": DB_PASSWORD,
+#         "HOST": DB_HOST,
+#         "PORT": DB_PORT,
+#     }
+# }
+
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": DB_NAME,
-        "USER": DB_USER,
-        "PASSWORD": DB_PASSWORD,
-        "HOST": DB_HOST,
-        "PORT": DB_PORT,
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": "VocabDB",
     }
 }
 
@@ -125,3 +142,5 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_URL = reverse_lazy('user_account:login_user')
