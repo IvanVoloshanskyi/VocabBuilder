@@ -1,23 +1,32 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-    <div class="vocab_register">
+    <div class="vocab_register vocab_main">
         <section class="vocab_register__form">
             <p class="p_register">Login</p>
             <p class="p_register__secondary">Please enter your login details to continue using our service:</p>
-            <input type="text" placeholder="Email" class="vocab_register__form-input">
 
-            <div class="password-input">
-                <input placeholder="Password" type="password" id="password" name="password"
-                       class="vocab_register__form-input">
-                <img class="toggle-password" src="{% static "img/eye.png" %}" alt="Show/Hide Password"
-                     onclick="togglePassword()">
-            </div>
+            <form method="post" action="{% url 'user_account:login_user' %}" class="auth-form">
+                {% csrf_token %}
+                {{ form.username }}
 
-            <div class="vocab_register__buttons">
-                <a href="{% url 'login' %}"><button class="vocab_register__button register">Login</button></a>
-                <a href="{% url 'home' %}"><button class="vocab_register__button login">Register</button></a>
-            </div>
+                <div class="error-message">
+                </div>
+                <div class="password-input">
+                    {{ form.password }}
+
+                    <img class="toggle-password" src="{% static "img/eye.png" %}" alt="Show/Hide Password"
+                         onclick="togglePassword()">
+                </div>
+                {{ form.non_field_errors }}
+
+                <div class="vocab_register__buttons">
+                    <button class="vocab_register__button register" type="submit">Login</button>
+                </div>
+            </form>
+            <a href="{% url 'user_account:register' %}">
+                <button class="vocab_register__button login">Register</button>
+            </a>
 
         </section>
 
@@ -26,7 +35,7 @@
         </section>
         <script>
             function togglePassword() {
-                var passwordInput = document.getElementById("password");
+                var passwordInput = document.getElementById("id_password");
                 var toggleIcon = document.querySelector(".toggle-password");
 
                 if (passwordInput.type === "password") {

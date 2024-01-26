@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <section class="zero_words">
+        <div class="zero_words__info">
+            <h2>You need at least 10 words to start training </h2>
+            <h4>Please create or add a word to start the workout. We want to improve your vocabulary and develop your
+                knowledge, so please share the words you are interested in adding to your study.</h4>
+            <div class="zero_words__buttons">
+                <a href="{% url 'vocab:dictionary:word_create' %}"><button class="zero_words__buttons edit-word__buttons-cancel">Add word</button></a>
+                <a href="{{ request.META.HTTP_REFERER }}"><button class="cancel_button">Cancel</button></a>
+            </div>
+        </div>
+        <div class="zero_words__picture">
+            <img src="{% static 'img/blood-report.svg' %}" alt="">
+        </div>
+    </section>
+{% endblock %}

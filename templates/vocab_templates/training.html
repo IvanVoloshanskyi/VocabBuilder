@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <section class="training_block vocab_main">
+        <div id="progress-bar-container">
+            <p class="training_counter_words">{{ words_left_amount }} words left</p>
+            <div id="progress-bar"></div>
+        </div>
+
+        <div class="training_field">
+            <div class="training_field__ua-part">
+                <form method="post" action="{% url 'vocab:training:training-page' %}" class="training_form_next_word">
+                    {% csrf_token %}
+                    <label for="answer">
+                        <input autocomplete="off" type="text" id="answer" name="answer" required
+                               placeholder="Введіть переклад">
+                    </label>
+                    <button type="submit">Next
+                        <img src="{% static 'img/arrow-right.svg' %}" alt="">
+                    </button>
+                </form>
+                <div class="together__training">
+                    <img src="{% static 'img/ukraine.svg' %}" alt="">
+                    <span class="training_Ukrainian-text">Ukrainian</span>
+                </div>
+
+            </div>
+            <div class="training_field__en-part">
+
+                <span>{{ current_en_user_word }}</span>
+                <div class="together__training uk">
+
+                    <img src="{% static 'img/united kingdom.svg' %}" alt="">
+                    <span class="training_English-text">English</span>
+                </div>
+            </div>
+        </div>
+        <div class="training_buttons">
+            <form method="post" action="{% url 'vocab:training:show-results' %}" class="training_form_save_words">
+                {% csrf_token %}
+                <a href="{% url 'vocab:training:show-results' %}">
+                    <button style="width: 100%;">Save</button>
+                </a>
+            </form>
+            <a href="{% url 'vocab:training:make_new_words' %}" style="width: 100%;"><button class="cancel_button">Cancel</button></a>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const totalWords = {{ total_words }};  // Загальна кількість слів
+            const remainingWords = {{ words_left_amount }};  // Кількість залишених слів
+
+            const progressBar = document.getElementById('progress-bar');
+            const progress = (remainingWords / totalWords) * 100;
+
+            progressBar.style.width = progress + '%';
+        });
+    </script>
+{% endblock %}

@@ -4,12 +4,12 @@
 
 
     <section class="dictionary_block vocab_main">
-        {% if words %}
-
+        {% if rec_words %}
             <div class="dictionary">
                 <div class="dictionary_inputs">
                     <section class="dictionary_actions">
-                        <form method="get" action="{% url 'vocab:dictionary:main_page' %}" class="dictionary_actions">
+                        <form method="get" action="{% url 'vocab:recommend:recommend-page' %}"
+                              class="dictionary_actions">
                             <div class="dictionary_actions__search">
                                 {{ form.search_input }}
                             </div>
@@ -28,9 +28,7 @@
                                 style="font-weight: bold; color: black">{{ get_study_words }}
                         </span>
                     </p>
-                    <p class="down"><a class="down" href="{% url 'vocab:dictionary:word_create' %}">Add
-                        Word <img
-                                src="{% static 'img/plus.svg' %}" alt=""></a></p>
+
                     <p class="down">
                         <a href="{% url 'vocab:training:training-page' %}" class="down">
                             <span>Train oneself</span>
@@ -54,32 +52,24 @@
                             Translation
                         </th>
                         <th>Category</th>
-                        <th>Progress</th>
                         <th></th>
 
                     </tr>
                     </thead>
                     <tbody>
-                    {% for word in words %}
+                    {% for rec_word in rec_words %}
+
 
                         <tr>
-                            <td>{{ word.en_word }}</td>
-                            <td>{{ word.ua_word }}</td>
-                            <td>{{ word.category }}</td>
-                            <td class="td-dictionary-progress">
-                                <div class="dictionary-progress">
-                                    <p>{{ word.status }}%</p>
-                                    <div role="progressbar" aria-valuenow="{{ word.status }}" aria-valuemin="0"
-                                         aria-valuemax="100"
-                                         style="--value:{{ word.status }}"></div>
-                                </div>
-                            </td>
+                            <td>{{ rec_word.en_word }}</td>
+                            <td>{{ rec_word.ua_word }}</td>
+                            <td>{{ rec_word.category }}</td>
                             <td class="action-with-word">
-                                {% include 'inc/_modal.html' %}
+                                {% include 'inc/_add_to_dictionary.html' %}
                             </td>
                         </tr>
-
                     {% endfor %}
+
 
                     </tbody>
                 </table>
@@ -88,7 +78,6 @@
         {% else %}
             {% include 'inc/_zero_words.html' %}
         {% endif %}
-
     </section>
 
 {% endblock %}

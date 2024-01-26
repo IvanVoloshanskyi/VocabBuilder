@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <section class="popup">
+        <div class="edit-word-wrapper">
+            <form method="post" action="{% url 'vocab:dictionary:word_update' word.pk %}">
+                <input type="hidden" name="value" value="{{ request.META.HTTP_REFERER }}">
+
+                {% csrf_token %}
+                <div class="edit-word__inputs update">
+                    <div class="edit-word__inputs-ua">
+                        {{ form.ua_word }}
+                        <div class="together">
+                            <img src="{% static 'img/ukraine.svg' %}" alt="">
+                            <span>Ukrainian</span>
+                        </div>
+                    </div>
+                    <div class="edit-word__inputs-eng">
+                        {{ form.en_word }}
+                        <div class="together">
+                            <img src="{% static 'img/united kingdom.svg' %}" alt="">
+                            <span>English</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="edit-word__buttons">
+                    <button class="edit-word__buttons-save" type="submit">Save
+                    </button>
+                    <a href="{{ request.META.HTTP_REFERER }}">
+                        <button class="edit-word__buttons-cancel" type="button">Cancel</button>
+                    </a>
+                </div>
+            </form>
+        </div>
+
+    </section>
+{% endblock %}

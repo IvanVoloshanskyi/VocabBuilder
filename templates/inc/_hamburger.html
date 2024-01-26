@@ -1,0 +1,60 @@
+{% extends 'inc/_header.html' %}
+{% load static %}
+{% block content %}
+    <section class="hamburger-menu">
+        <div class="nav-hamburger" onclick="toggleMenu()">
+            <img src="{% static 'img/Nav.svg' %}" alt="menu-icon" class="nav-hamburger__img">
+        </div>
+        <div id="nav-links" class="nav-items">
+            <a href="{% url 'vocab:dictionary:main_page' %}">
+                <button class="vocab_header__navigations__button {% if request.resolver_match.url_name == 'main_page' %}active{% endif %}">
+                    Dictionary
+                </button>
+            </a>
+
+            <a href="{% url 'vocab:recommend:recommend-page' %}" >
+                <button class="vocab_header__navigations__button {% if request.resolver_match.url_name == 'recommend-page' %}active{% endif %}">
+                    Recommend
+                </button>
+            </a>
+
+            <a href="{% url 'vocab:training:training-page' %}">
+                <button class="vocab_header__navigations__button {% if request.resolver_match.url_name == 'training-page' %}active{% endif %}">
+                    Training
+                </button>
+            </a>
+        </div>
+
+    </section>
+
+    <script>
+        const OPEN_CLASSNAME = 'open';
+        const vocabHeaderProfile = document.querySelector('.vocab_header__profile');
+        const navLinks = document.getElementById("nav-links");
+        const vocabTextContainer = document.querySelector(".vocab_header__logo-text");
+        const hamburgerLogo = document.querySelector('.nav-hamburger__img');
+        const userLogo = document.querySelector('.vocab_header__profile img');
+
+        function toggleMenu() {
+            if (navLinks.classList.contains(OPEN_CLASSNAME)) {
+                navLinks.classList.remove(OPEN_CLASSNAME);
+                vocabTextContainer.classList.remove("hidden");
+                vocabHeaderProfile.style.flexDirection = 'row';
+                hamburgerLogo.src = "{% static 'img/Nav.svg' %}"
+                userLogo.src = "{% static 'img/user.png' %}"
+
+
+            } else {
+                navLinks.classList.add(OPEN_CLASSNAME);
+                vocabTextContainer.classList.add("hidden");
+                vocabHeaderProfile.style.flexDirection = 'row-reverse';
+                hamburgerLogo.src = "{% static 'img/x.svg' %}"
+                userLogo.src = "{% static 'img/user_white.svg' %}"
+
+            }
+        }
+
+
+    </script>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'vocab_templates/training.html' %}
+{% load static %}
+
+{% block content %}
+    <section class="popup">
+        <div class="edit-word-wrapper training">
+            <p class="close-popup"><a href="{% url 'vocab:training:training-page' %}">×</a></p>
+            <h1>Well done</h1>
+            <div class="training-answers">
+                <div class="correct-answers">
+                    <p class="correct-answers__text">Сorrect answers: </p>
+                    {% for answer in answers %}
+                        {% if answer.is_correct == True %}
+                            <p class="training-word">{{ answer.en_word }}</p>
+                        {% endif %}
+                    {% endfor %}
+
+                </div>
+                <div class="mistakes">
+                    <p class="mistakes__text">Mistakes:</p>
+                    {% for answer in answers %}
+                        {% if answer.is_correct == False %}
+                            <p class="training-word">{{ answer.en_word }}</p>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

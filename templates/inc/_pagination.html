@@ -1,0 +1,35 @@
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a class="pagination-first" href="?page=1{% if form.search_input.value %}&search_input={{ form.search_input.value }}{% endif %}{% if form.category.value %}&category={{ form.category.value }}{% endif %}">&#171;</a>
+            <a class="pagination-previous" href="?page={{ page_obj.previous_page_number }}{% if form.search_input.value %}&search_input={{ form.search_input.value }}{% endif %}{% if form.category.value %}&category={{ form.category.value }}{% endif %}">&#8249;</a>
+
+            {% if page_obj.number > 3 %}
+                <a href="?page=1{% if form.search_input.value %}&search_input={{ form.search_input.value }}{% endif %}{% if form.category.value %}&category={{ form.category.value }}{% endif %}">1</a>
+                {% if page_obj.number > 4 %}
+                    <span class="step-links">...</span>
+                {% endif %}
+            {% endif %}
+        {% endif %}
+
+        {% for num in page_obj.paginator.page_range %}
+            {% if page_obj.number == num %}
+                <a href="?page={{ num }}{% if form.search_input.value %}&search_input={{ form.search_input.value }}{% endif %}{% if form.category.value %}&category={{ form.category.value }}{% endif %}" class="step-links active">{{ num }}</a>
+            {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                <a href="?page={{ num }}{% if form.search_input.value %}&search_input={{ form.search_input.value }}{% endif %}{% if form.category.value %}&category={{ form.category.value }}{% endif %}">{{ num }}</a>
+            {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+            {% if page_obj.number < page_obj.paginator.num_pages|add:'-3' %}
+                <span class="step-links">...</span>
+                <a href="?page={{ page_obj.paginator.num_pages }}{% if form.search_input.value %}&search_input={{ form.search_input.value }}{% endif %}{% if form.category.value %}&category={{ form.category.value }}{% endif %}">{{ page_obj.paginator.num_pages }}</a>
+            {% elif page_obj.number < page_obj.paginator.num_pages|add:'-2' %}
+                <a href="?page={{ page_obj.paginator.num_pages }}{% if form.search_input.value %}&search_input={{ form.search_input.value }}{% endif %}{% if form.category.value %}&category={{ form.category.value }}{% endif %}">{{ page_obj.paginator.num_pages }}</a>
+            {% endif %}
+
+            <a class="pagination-next" href="?page={{ page_obj.next_page_number }}{% if form.search_input.value %}&search_input={{ form.search_input.value }}{% endif %}{% if form.category.value %}&category={{ form.category.value }}{% endif %}">&#8250;</a>
+            <a class="pagination-last" href="?page={{ page_obj.paginator.num_pages }}{% if form.search_input.value %}&search_input={{ form.search_input.value }}{% endif %}{% if form.category.value %}&category={{ form.category.value }}{% endif %}" >&#187;</a>
+        {% endif %}
+    </span>
+</div>
