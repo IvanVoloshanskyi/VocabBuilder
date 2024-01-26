@@ -1,10 +1,11 @@
 from django.urls import path, include
-from vocab.views import home, login, dictionary, test_func
+
+# Powered by Ivan Voloshanskyi
+
+app_name = 'vocab'
 
 urlpatterns = [
-    path('', home, name="home"),
-    path('login/', login, name="login"),
-    path('dictionary/', dictionary, name="dictionary"),
-    path('test/', test_func)
+    path('', include('vocab.modules.dictionary.urls')),
+    path('', include('vocab.modules.recommend.urls')),
+    path('', include('vocab.modules.training.urls')),
 ]
-
