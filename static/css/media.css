@@ -1,0 +1,388 @@
+/*Yes, all media in 1 file*/
+
+@media only screen and (max-width: 768px) {
+    .vocab_register {
+        margin-top: 10%;
+    }
+
+
+    .vocab_register__form {
+        width: 100%;
+        padding: 8%;
+        margin-right: 0;
+    }
+
+    .auth-form div.password-input input {
+        width: 89.45%;
+    }
+
+    .vocab_register_info {
+        display: none;
+    }
+
+    .vocab_register__button {
+        padding: 5%;
+    }
+
+    .vocab_register__form-input {
+        padding: 5%;
+    }
+
+    .vocab_header__navigations {
+        display: none;
+    }
+
+    .dictionary_additional_buttons {
+        width: 100%;
+    }
+
+    .dictionary {
+        align-items: normal;
+        flex-direction: column;
+    }
+
+    .dictionary_inputs {
+        display: flex;
+        width: 100%;
+
+
+    }
+
+    .dictionary_block {
+        height: 100vh;
+    }
+
+    .dictionary_actions {
+        height: 27vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .dictionary_actions button {
+        height: 25%;
+    }
+
+    .dictionary_actions__categories select {
+        width: 100%;
+        padding: 5%;
+    }
+
+    .dictionary_actions__search input {
+        width: 89%;
+        padding: 5%;
+    }
+
+    .dictionary_additional_buttons {
+        margin-top: 5%;
+    }
+
+    .down {
+        width: 100%;
+    }
+
+    .custom-table {
+        border: none;
+        font-size: 10px;
+    }
+
+    .td-dictionary-progress {
+    }
+
+    .custom-table td, .custom-table th {
+        padding: 2%;
+    }
+
+    .dictionary-progress p, .modal-content__action span {
+        display: none;
+    }
+
+    .dictionary-progress {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .word-header, .translation-header {
+        background-image: none;
+    }
+
+    td.action-with-word {
+        padding: 0;
+    }
+
+
+    .pagination {
+        margin-top: 10%;
+    }
+
+    .step-links a, .step-links span {
+        padding: 10px;
+    }
+
+    a.pagination-previous, a.pagination-next, a.pagination-last, a.pagination-first {
+        display: none;
+    }
+
+    .popup.add-word {
+        top: 0;
+    }
+
+    .add-word-wrapper {
+        width: 80%;
+        margin: 12% auto;
+        height: 70%;
+        padding: 15% 9% 9%;
+    }
+
+    .add-word__select select {
+        width: 100%;
+        height: 50px;
+    }
+
+    .edit-word__inputs-ua, .edit-word__inputs-eng {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        margin-bottom: 3%;
+        height: 75px;
+        align-items: flex-start;
+    }
+
+    .edit-word__inputs-ua input, .edit-word__inputs-eng input {
+        width: 95%;
+    }
+
+
+    .edit-word-wrapper {
+        padding: 15% 4%;
+        width: 90%;
+        margin: 40% auto;
+    }
+
+    .edit-word__buttons {
+        margin-top: 13%;
+    }
+
+
+    .training_field {
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .training_form_next_word {
+    }
+
+    .training_field__ua-part {
+        border-right: none;
+        border-bottom: 2px solid #DBDBDB;
+    }
+
+    .training_field__ua-part, .training_field__en-part {
+        width: 96%;
+        height: 50%;
+        align-items: flex-end;
+
+    }
+
+    .together__training.uk {
+        width: 23%;
+    }
+
+    .together__training {
+        justify-content: flex-end;
+
+    }
+
+    .training_Ukrainian-text, .training_English-text {
+        display: none;
+
+    }
+
+    .training_buttons {
+        flex-direction: column;
+
+    }
+
+    .training_form_save_words, .training_buttons button {
+        width: 100%;
+
+    }
+
+    .training_buttons button {
+        margin-top: 4%;
+        padding: 4%;
+    }
+
+
+    .zero_words {
+        flex-direction: column-reverse;
+    }
+
+    .zero_words__buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .zero_words__buttons button, button.zero_words__buttons.edit-word__buttons-cancel {
+        width: 100%;
+        padding: 5%;
+        text-align: center;
+        margin-top: 3%;
+    }
+
+    button.zero_words__buttons.edit-word__buttons-cancel {
+        display: flex;
+        align-items: center;
+    }
+
+    .zero_words__picture {
+        left: 20px;
+        position: relative;
+    }
+
+
+    .edit-word-wrapper.training {
+        width: 90%;
+        margin: 15% auto;
+    }
+
+    .close-popup {
+        right: 0;
+        top: -40px;
+    }
+
+
+    .custom-table th,
+    .custom-table td {
+        padding: 13px; /* Зменште величину відступів для мобільних пристроїв */
+    }
+
+    .custom-table th,
+    .custom-table td,
+    .custom-table th:first-child,
+    .custom-table th:last-child,
+    .custom-table tr:last-child td:first-child,
+    .custom-table tr:last-child td:last-child {
+        border-radius: 0; /* Зняття округлення для мобільних пристроїв */
+    }
+
+
+    .hamburger-menu {
+        display: block;
+        position: relative;
+    }
+
+    .nav-content {
+        color: black;
+    }
+
+    .navbar {
+        height: 60px;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+
+        background-color: #fff;
+        margin: 0 auto;
+
+    }
+
+    .nav-hamburger {
+        display: block;
+        z-index: 1;
+        position: relative;
+    }
+
+
+    .nav-items a {
+        font-size: 20px;
+        height: 13%;
+    }
+
+    .nav-items {
+        padding-top: 200px;
+        background-color: #85AA9F;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin-top: 0;
+        clip-path: circle(0 at top left);
+        transition: clip-path 0.9s ease-in;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .nav-items.open {
+        display: flex;
+        clip-path: circle(1200px at top left);
+        flex-direction: column;
+        align-items: center;
+    }
+
+    a.nav-items {
+        flex-direction: column;
+        height: 100%;
+
+    }
+
+    #nav-links a {
+        width: 32%;
+        text-align: center;
+
+    }
+
+
+    .vocab_header__profile {
+        z-index: 1;
+        position: relative;
+    }
+
+
+    .vocab_header__logo-text {
+        width: 70%;
+    }
+
+    .vocab_header__logo-text.hidden {
+        display: none;
+    }
+
+    .vocab_header__navigations__button.active {
+        background-color: white;
+        color: black;
+        height: 100%;
+    }
+
+    .vocab_header__navigations__button:hover {
+        background-color: inherit;
+        color: white;
+    }
+
+    .vocab_header__navigations__button {
+        background-color: #85AA9F;
+        color: white;
+    }
+
+    .training_block.vocab_main {
+        padding-top: 25%;
+        padding-bottom: 29%;
+    }
+
+    .training_form_next_word button {
+        margin-bottom: 10px;
+
+    }
+
+
+    .popup{
+        z-index: 2;
+    }
+}

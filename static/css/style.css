@@ -1,4 +1,11 @@
 @import "global.css";
-@import "_inc/_header/_header.css";
+@import "_inc/_header.css";
 @import "register/register.css";
 @import "vocab/dictionary.css";
+@import "vocab/training.css";
+@import "_inc/_edit-word.css";
+@import "_inc/_add-word.css";
+@import "_inc/_pagination.css";
+@import "_inc/_zero_words.css";
+@import "_inc/_well_done_modal.css";
+@import "media.css";

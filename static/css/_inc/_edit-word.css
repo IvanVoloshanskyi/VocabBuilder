@@ -1,0 +1,84 @@
+.popup {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.edit-word-wrapper {
+    background-color: var(--main-green-color);
+    border-radius: 30px;
+    padding: 4%;
+    width: 30%;
+    margin: 14% auto;
+}
+
+.edit-word__inputs{
+    margin-top: 10%;
+}
+
+.edit-word__inputs.update{
+    margin-top: 0;
+}
+.edit-word__inputs-ua input, .edit-word__inputs-eng input {
+    background-color: var(--main-green-color);
+    border-color: #a9c3bc;
+    color: white;
+    border-radius: 15px;
+    padding: 3%;
+    margin-right: 3%;
+    width: 66%;
+
+
+}
+
+.edit-word__inputs-ua, .edit-word__inputs-eng {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3%;
+}
+
+.edit-word__inputs-eng {
+    margin-bottom: 4%;
+}
+
+.edit-word__inputs-ua input::placeholder, .edit-word__inputs-eng input::placeholder, .edit-word__inputs-ua span, .edit-word__inputs-eng span {
+    color: white;
+}
+
+.edit-word__buttons-save {
+    color: black;
+    background-color: white;
+    border-radius: 30px;
+    padding: 3%;
+    font-size: 18px;
+    width: 49%;
+}
+
+button.edit-word__buttons-cancel {
+    padding: 3%;
+    color: white;
+    border: 1px solid #a9c3bc;
+    font-size: 18px;
+    width: 49%;
+
+
+}
+
+.together img {
+    width: 24px;
+    height: 24px;
+    margin-right: 7%;
+
+
+}
+
+.together {
+    display: flex;
+    align-items: center;
+    width: 24%;
+}

@@ -1,0 +1,30 @@
+.pagination {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.step-links {
+    display: flex;
+    align-items: flex-end;
+}
+
+.step-links a, .step-links span {
+    display: flex;
+    padding: 15px;
+    margin: 0 5px;
+    border: 1px solid #e2e2e2;
+    text-decoration: none;
+    color: black;
+    border-radius: 8px;
+    height: 6px;
+    align-items: center;
+    font-weight: bold;
+}
+
+
+.step-links.active {
+    background-color: #85AA9F;
+    color: white;
+    border: 1px solid #85AA9F;
+}

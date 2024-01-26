@@ -1,0 +1,30 @@
+.zero_words{
+    padding: 10%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.zero_words__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.zero_words__buttons.edit-word__buttons-cancel, .cancel_button{
+    width: 25%;
+}
+
+
+.cancel_button{
+    background-color: #fff;
+    color: #85AA9F;
+    border: 1px solid #85AA9F;
+    font-size: 18px;
+}
+
+.cancel_button:hover{
+    color: white;
+    background-color: #85AA9F;
+}

@@ -1,6 +1,22 @@
-.vocab_register{
+.auth-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-form div.password-input input {
+    width: 93.59%;
+}
+
+.vocab_register.vocab_main {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+.vocab_register {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
 
 .vocab_register__form {
@@ -8,30 +24,35 @@
     flex-direction: column;
     background-color: rgba(133, 170, 159, 0.1);
     border-radius: 30px;
-    padding: 7%;
-    width: 45%;
+    padding: 1% 4% 1%;
+    width: 34%;
     margin-right: 5%;
 }
-.p_register{
-    font-size: 40px;
-    margin: 0 0 15px 0;
-    font-weight: bold;
+
+.p_register {
+    font-size: 36px;
+    margin: 15px 0 15px 0;
+    font-weight: bold
 }
-.p_register__secondary{
+
+.p_register__secondary {
     font-size: 20px;
     line-height: 30px;
     font-weight: lighter;
     margin-bottom: 32px;
 }
-.vocab_register__buttons{
+
+.vocab_register__buttons {
     display: flex;
     flex-direction: column;
 }
 
-.vocab_register__button{
+.vocab_register__button {
+    padding: 3%;
     width: 100%;
 }
-.vocab_register__button.login{
+
+.vocab_register__button.login {
     background-color: initial;
     color: rgba(18, 20, 23, 0.5);
     text-align: center;
@@ -39,22 +60,20 @@
     margin-top: 2%;
 }
 
-.vocab_register__form-input{
+.vocab_register__form-input {
     background-color: rgba(133, 170, 159, 0.1);
     margin-bottom: 14px;
 }
+
 .password-input {
     position: relative;
 }
 
 
-input#password{
+input#password {
     width: 94%;
 }
 
-.vocab_register_info img{
-    margin-top: 3%;
-}
 .toggle-password {
     position: absolute;
     top: 38%;
@@ -66,9 +85,11 @@ input#password{
     transition: transform 0.3s ease-in-out;
 
 }
-.vocab_header__profile img{
+
+.vocab_header__profile img {
 
 }
+
 .toggle-password.active {
     transform: translateY(-50%) rotate(180deg);
 }

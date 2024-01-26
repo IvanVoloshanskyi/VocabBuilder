@@ -1,5 +1,6 @@
 .dictionary_block {
-    padding: 4%;
+    background-color: #f8f8f8;
+
 }
 
 .dictionary {
@@ -15,33 +16,36 @@
 }
 
 .dictionary_actions {
+    width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
-.dictionary_actions__search {
-    margin-right: 8%;
-}
 
 .dictionary_actions__search input {
-    padding: 5%;
+    padding: 6%;
     background-repeat: no-repeat;
     background-position: 93%;
     font-size: 16px;
+    background-color: inherit;
+    background-image: url('../../img/search.svg');
+    margin-bottom: 0;
 
 }
 
-.dictionary_words_table{
+.dictionary_words_table {
     margin-top: 3%;
 }
 
-.dictionary_actions__categories {
-    padding: 2%;
+.dictionary_actions__categories select {
+    padding: 10%;
     border: 1px solid #1214171A;
     display: flex;
     flex-direction: row;
     align-items: center;
     border-radius: 15px;
+    background-color: inherit;
 }
 
 
@@ -67,11 +71,14 @@
 
 
 .custom-table {
+    border: 15px solid white;
     font-size: 14px;
-    border-radius: 10px;
+    border-radius: 15px;
     border-spacing: 0;
     text-align: center;
     width: 100%;
+    background-color: white; /* Білий фон */
+    overflow: hidden; /* Забезпечте, що фон не виходить за межі заокруглених кутів */
 }
 
 .custom-table th {
@@ -80,22 +87,23 @@
     padding: 22px 22px;
 }
 
-.word-header, .translation-header{
+.word-header, .translation-header {
     background-image: url('../../img/united kingdom.svg');
     background-repeat: no-repeat;
     background-position: center right 5%;
     background-size: 24px;
 }
 
-.translation-header{
+.translation-header {
     background-image: url('../../img/ukraine.svg');
 }
 
-.custom-table th, .custom-table td{
+.custom-table th, .custom-table td {
     border-style: solid;
     border-width: 0 1px 1px 0;
     border-color: #DBDBDB;
     text-align: left;
+
 }
 
 .custom-table th:first-child, .custom-table td:first-child {
@@ -103,11 +111,11 @@
 }
 
 .custom-table th:first-child {
-    border-top-left-radius: 10px;
+    border-top-left-radius: 15px;
 }
 
 .custom-table th:last-child {
-    border-top-right-radius: 10px;
+    border-top-right-radius: 15px;
     border-right: none;
 }
 
@@ -116,11 +124,11 @@
 }
 
 .custom-table tr:last-child td:first-child {
-    border-radius: 0 0 0 10px;
+    border-radius: 0 0 0 15px;
 }
 
 .custom-table tr:last-child td:last-child {
-    border-radius: 0 0 10px 0;
+    border-radius: 0 0 15px 0;
 }
 
 .custom-table tr td:last-child {
@@ -128,11 +136,62 @@
 }
 
 
-.action-with-word {
-    font-weight: bold;
-    font-size: 22px;
+/*Actions ( Edit and Delete ) with words */
+.modal {
+    display: block;
+    background-color: inherit;
 }
 
-.action-with-word:last-child{
-    text-align: center;
+
+.modal-content__action {
+    display: flex;
+    align-content: center;
+    margin-bottom: 6%;
+}
+
+.modal-content__action.add-to-dict {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.modal-content__action.add-to-dict img {
+    margin-left: 2%;
+}
+
+.modal-content__action:last-child {
+    margin-bottom: 0;
+}
+
+.modal-content__action img {
+    margin-right: 5%;
+}
+
+/*------------------------------------------------*/
+.dictionary-progress{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dictionary-progress p{
+    margin-right: 3%;
+}
+
+div[role="progressbar"] {
+    --size: 1rem;
+    --fg: #2BD627;;
+    --bg: #def;
+    --pgPercentage: var(--value);
+    animation: growProgressBar 3s 1 forwards;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    color: var(--fg);
+
 }

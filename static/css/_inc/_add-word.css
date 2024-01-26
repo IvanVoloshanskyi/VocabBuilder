@@ -1,0 +1,36 @@
+.add-word-wrapper {
+    display: flex;
+    background-color: var(--main-green-color);
+    height: 50%;
+    border-radius: 30px;
+    padding: 4%;
+    width: 30%;
+    margin: 14% auto;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.popup.add-word {
+    top: -20%;
+}
+
+
+.add-word-wrapper h1, .add-word-wrapper span {
+    color: #FCFCFCCC;
+}
+
+.add-word__select select{
+    background-color: #85AA9F;
+    padding: 4%;
+    border-radius: 15px;
+    border: 1px solid #FCFCFC4D;
+    outline: #FCFCFC4D 10px;
+    color: white;
+    font-weight: bold;
+
+}
+
+
+.add-word__select select:focus-visible{
+}

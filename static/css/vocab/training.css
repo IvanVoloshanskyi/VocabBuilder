@@ -1,0 +1,122 @@
+.training_block {
+    background-color: #f8f8f8;
+}
+
+
+.training_field {
+    height: 45vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 15px solid white;
+    border-radius: 15px;
+}
+
+.training_field__ua-part {
+    border-right: 2px solid #DBDBDB;
+}
+
+.training_field__ua-part input {
+    border-radius: 0;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0;
+    font-size: 20px;
+
+}
+
+.training_field__ua-part input::placeholder {
+    color: black;
+    font-size: 20px;
+
+}
+
+.training_field__ua-part, .training_field__en-part {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    align-items: flex-start;
+
+
+}
+
+.training_field__en-part span {
+    font-size: 20px;
+
+}
+
+
+.together__training {
+    width: 23%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.together__training img {
+    max-height: 32px;
+    max-width: 32px;
+}
+
+.together__training.uk {
+    width: 20%;
+}
+
+
+.training_buttons {
+    margin-top: 4%;
+    display: flex;
+    flex-direction: row;
+}
+
+.training_buttons button {
+    padding: 1%;
+    width: 15%;
+    border: 1px solid #85AA9F;
+    font-size: 18px;
+}
+
+
+.training_form_save_words {
+    margin-right: 2%;
+    width: 15%;
+}
+
+.training_form_next_word {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+.training_form_next_word button {
+    background-color: inherit;
+    font-size: 16px;
+    color: #878889;
+    height: 10%;
+    padding: 0;
+}
+
+
+#progress-bar-container {
+    margin-left: 3%;
+    width: 95%;
+    height: 20px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 100%;
+    background-color: #4CAF50;
+    transition: width 0.5s ease-in-out;
+}
+
+.training_counter_words{
+    font-weight: 600;
+}
