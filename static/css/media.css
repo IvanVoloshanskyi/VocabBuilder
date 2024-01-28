@@ -220,6 +220,8 @@
 
     .zero_words {
         flex-direction: column-reverse;
+        position: relative;
+        z-index: 0;
     }
 
     .zero_words__buttons {
@@ -382,7 +384,17 @@
     }
 
 
-    .popup{
+    .popup {
+        z-index: 2;
+    }
+
+    .zero_words__picture img {
+        position: relative;
+        z-index: 0;
+    }
+
+    .vocab_headers.vocab_main {
+        position: relative;
         z-index: 2;
     }
 }
