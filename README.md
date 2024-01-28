@@ -8,15 +8,11 @@ words from English into Ukrainian. Use of
 asynchronous technologies and code
 optimization for efficient query processing</p>
 <p>Website url: <a href="https://v1van.pythonanywhere.com/">Link</a></p>
-<div style="display: flex; flex-direction: row;">
-  <div style="display: flex; flex-direction: column; width: 90%;">
-    <img src="https://github.com/IvanVoloshanskyi/VocabBuilder/assets/93157729/4bdcaaf6-ef37-4130-a617-a0283664bb18" style="width: 100%;">
-    <img src="https://github.com/IvanVoloshanskyi/VocabBuilder/assets/93157729/f4ba9071-8a90-4024-b1ca-75abf1804085" style="width: 100%;">
-  </div>
-  <div style="width: 29.3%;">
-    <img src="https://github.com/IvanVoloshanskyi/VocabBuilder/assets/93157729/0db625ce-7c1d-4bcd-a55a-f0782d7d35b9" style="width: 100%;">
-  </div>
-</div>
+<img src="https://github.com/IvanVoloshanskyi/VocabBuilder/assets/93157729/4bdcaaf6-ef37-4130-a617-a0283664bb18" style="width: 100%;">
+<img src="https://github.com/IvanVoloshanskyi/VocabBuilder/assets/93157729/f4ba9071-8a90-4024-b1ca-75abf1804085" style="width: 100%;">
+<p align="center">
+ <img src="https://github.com/IvanVoloshanskyi/VocabBuilder/assets/93157729/0db625ce-7c1d-4bcd-a55a-f0782d7d35b9" style="width: 30%;">
+</p>
 <p>The mobile layout was designed for phones with a 6.1-inch screen.</p>
 <p>Best for all iPhones of the "pro" version</p>
 
